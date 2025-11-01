@@ -182,6 +182,44 @@ fun FormRegistrasi() {
                         cursorColor = MaterialTheme.colorScheme.primary
                     )
                 )
+
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Text(
+                        "Jenis Kelamin:",
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.padding(horizontal = 16.dp)
+                        ) {
+                            RadioButton(
+                                selected = jenisKelamin == "Laki-laki",
+                                onClick = { jenisKelamin = "Laki-laki" }
+                            )
+                            Text("Laki-laki", style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurface)
+                        }
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.padding(horizontal = 16.dp)
+                        ) {
+                            RadioButton(
+                                selected = jenisKelamin == "Perempuan",
+                                onClick = { jenisKelamin = "Perempuan" }
+                            )
+                            Text("Perempuan", style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.onSurface)
+                        }
+                    }
+                }
             }
         }
     }
