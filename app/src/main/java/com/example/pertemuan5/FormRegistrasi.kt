@@ -111,6 +111,26 @@ fun FormRegistrasi() {
                         cursorColor = MaterialTheme.colorScheme.primary
                     )
                 )
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Button(
+                        onClick = { datePickerDialog.show() },
+                        modifier = Modifier
+                            .weight(1.5f)
+                            .height(56.dp)
+                    ) {
+                        Text(
+                            text = if (tanggalLahir.isEmpty()) "Pilih Tanggal Lahir" else tanggalLahir,
+                            style = MaterialTheme.typography.bodyMedium,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    }
+                }
             }
         }
     }
