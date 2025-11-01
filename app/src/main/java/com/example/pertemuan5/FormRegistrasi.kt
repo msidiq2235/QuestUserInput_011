@@ -29,6 +29,11 @@ fun FormRegistrasi() {
     var kota by remember { mutableStateOf("") }
     var rt by remember { mutableStateOf("") }
     var rw by remember { mutableStateOf("") }
+    var tanggalLahir by remember { mutableStateOf("") }
+    var umur by remember { mutableStateOf("") }
+    var jenisKelamin by remember { mutableStateOf("") }
+    var isChecked by remember { mutableStateOf(false) }
+    var showDialog by remember { mutableStateOf(false) }
 
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
