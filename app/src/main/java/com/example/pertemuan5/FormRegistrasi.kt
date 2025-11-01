@@ -35,6 +35,17 @@ fun FormRegistrasi() {
     var isChecked by remember { mutableStateOf(false) }
     var showDialog by remember { mutableStateOf(false) }
 
+    val calendar = Calendar.getInstance()
+    val datePickerDialog = DatePickerDialog(
+        context,
+        { _, year, month, day ->
+            tanggalLahir = "$day/${month + 1}/$year"
+        },
+        calendar.get(Calendar.YEAR),
+        calendar.get(Calendar.MONTH),
+        calendar.get(Calendar.DAY_OF_MONTH)
+    )
+
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = R.drawable.bg_form),
