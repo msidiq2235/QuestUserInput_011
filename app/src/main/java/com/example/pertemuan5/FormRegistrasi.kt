@@ -220,6 +220,15 @@ fun FormRegistrasi() {
                         }
                     }
                 }
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Checkbox(checked = isChecked, onCheckedChange = { isChecked = it })
+                    Text(
+                        "Saya menyetujui data yang saya isi benar",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                }
             }
         }
     }
