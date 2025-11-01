@@ -95,6 +95,22 @@ fun FormRegistrasi() {
                         cursorColor = MaterialTheme.colorScheme.primary
                     )
                 )
+
+                OutlinedTextField(
+                    value = kota,
+                    onValueChange = { kota = it },
+                    label = { Text("Kota Asal") },
+                    modifier = Modifier.fillMaxWidth(),
+                    textStyle = MaterialTheme.typography.bodyLarge,
+                    singleLine = true,
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = MaterialTheme.colorScheme.primary,
+                        unfocusedBorderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+                        focusedLabelColor = MaterialTheme.colorScheme.primary,
+                        unfocusedLabelColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
+                        cursorColor = MaterialTheme.colorScheme.primary
+                    )
+                )
             }
         }
     }
