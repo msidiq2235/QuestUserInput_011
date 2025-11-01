@@ -252,6 +252,30 @@ fun FormRegistrasi() {
                     Text("Submit", style = MaterialTheme.typography.labelLarge)
                 }
             }
+
+            if (showDialog) {
+                AlertDialog(
+                    onDismissRequest = { showDialog = false },
+                    confirmButton = {
+                        TextButton(onClick = { showDialog = false }) {
+                            Text("OK")
+                        }
+                    },
+                    title = { Text("Registrasi Berhasil", style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.onSurface) },
+                    text = {
+                        Text(
+                            "Nama: $nama\n" +
+                                    "Kota Asal: $kota\n" +
+                                    "Tanggal Lahir: $tanggalLahir\n" +
+                                    "RT/RW: $rt/$rw\n" +
+                                    "Umur: $umur\n" +
+                                    "Jenis Kelamin: $jenisKelamin",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                    }
+                )
+            }
         }
     }
 }
