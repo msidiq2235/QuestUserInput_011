@@ -23,6 +23,13 @@ import java.util.*
 
 @Composable
 fun FormRegistrasi() {
+    val context = LocalContext.current
+
+    var nama by remember { mutableStateOf("") }
+    var kota by remember { mutableStateOf("") }
+    var rt by remember { mutableStateOf("") }
+    var rw by remember { mutableStateOf("") }
+
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = R.drawable.bg_form),
