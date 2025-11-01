@@ -165,6 +165,23 @@ fun FormRegistrasi() {
                         )
                     )
                 }
+
+                OutlinedTextField(
+                    value = umur,
+                    onValueChange = { umur = it },
+                    label = { Text("Umur") },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                    modifier = Modifier.fillMaxWidth(),
+                    textStyle = MaterialTheme.typography.bodyLarge,
+                    singleLine = true,
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = MaterialTheme.colorScheme.primary,
+                        unfocusedBorderColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),
+                        focusedLabelColor = MaterialTheme.colorScheme.primary,
+                        unfocusedLabelColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
+                        cursorColor = MaterialTheme.colorScheme.primary
+                    )
+                )
             }
         }
     }
