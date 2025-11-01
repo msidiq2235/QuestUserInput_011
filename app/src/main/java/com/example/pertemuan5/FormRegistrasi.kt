@@ -229,6 +229,28 @@ fun FormRegistrasi() {
                         color = MaterialTheme.colorScheme.onSurface
                     )
                 }
+
+                Button(
+                    onClick = {
+                        if (!isChecked) {
+                            Toast.makeText(context, "Centang persetujuan dulu!", Toast.LENGTH_SHORT)
+                                .show()
+                        } else if (
+                            nama.isBlank() || kota.isBlank() || tanggalLahir.isBlank() ||
+                            umur.isBlank() || jenisKelamin.isBlank()
+                        ) {
+                            Toast.makeText(context, "Harap isi semua data!", Toast.LENGTH_SHORT).show()
+                        } else {
+                            showDialog = true
+                        }
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(48.dp),
+                    enabled = isChecked
+                ) {
+                    Text("Submit", style = MaterialTheme.typography.labelLarge)
+                }
             }
         }
     }
