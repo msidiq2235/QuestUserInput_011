@@ -46,6 +46,16 @@ fun FormRegistrasi() {
         calendar.get(Calendar.DAY_OF_MONTH)
     )
 
+    val currentScheme = MaterialTheme.colorScheme
+    val blueSkyColorScheme = currentScheme.copy(
+        primary = Color(0xFF64B5F6),
+        onPrimary = Color.White,
+        primaryContainer = Color(0xFF42A5F5),
+        onPrimaryContainer = Color.White,
+        surface = Color.White.copy(alpha = 0.8f),
+        onSurface = Color.Black
+    )
+
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = R.drawable.bg_form),
@@ -53,5 +63,9 @@ fun FormRegistrasi() {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
+
+        MaterialTheme(colorScheme = blueSkyColorScheme) {
+
+        }
     }
 }
